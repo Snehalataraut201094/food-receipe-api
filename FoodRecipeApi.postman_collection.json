@@ -1,0 +1,893 @@
+{
+	"info": {
+		"_postman_id": "a040f178-8691-4ce0-9134-d4b53769f3fe",
+		"name": "FoodRecipeApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createRecipe",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \r\n       \"recipeName\": \"ButteChicken\",\r\n        \"recipeCategory\": \"Non-veg\",\r\n        \"noOfServings\": 5,\r\n        \"ingredients\": \"Chicken\",\r\n        \"instructions\": \"Utensils\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/{{resourcePath}}/createRecipe",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"{{resourcePath}}",
+						"createRecipe"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "createRecipe",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recipeName\":\"Pav-Bhaji\",\r\n    \"recipeCategory\":\"Veg\",\r\n    \"noOfServings\":\"2\",\r\n    \"ingredients\":\"Pav\",\r\n    \"instructions\":\"Cook\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/food-recipe-api/v1/createRecipe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"food-recipe-api",
+								"v1",
+								"createRecipe"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Sep 2022 14:08:43 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"recipeId\": 7,\n    \"recipeName\": \"Pav-Bhaji\",\n    \"recipeCategory\": \"Veg\",\n    \"noOfServings\": 2,\n    \"ingredients\": \"Pav\",\n    \"instructions\": \"Cook\"\n}"
+				}
+			]
+		},
+		{
+			"name": "updateRecipe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"recipeId\":\"1\",\r\n    \"recipeName\": \"ButterChicken\",\r\n    \"recipeCategory\": \"Non-veg\",\r\n    \"noOfServings\": 5,\r\n    \"ingredients\": \"Chicken\",\r\n    \"instructions\": \"Utensils\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/{{resourcePath}}/updateRecipe",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"{{resourcePath}}",
+						"updateRecipe"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "updateRecipe",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recipeId\":\"5\",\r\n    \"recipeName\":\"GulabJamun\",\r\n    \"recipeCategory\":\"Sweet-Dish\",\r\n    \"noOfServings\":\"7\",\r\n    \"ingredients\":\"flour\",\r\n    \"instructions\":\"fry\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/food-recipe-api/v1/updateRecipe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"food-recipe-api",
+								"v1",
+								"updateRecipe"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Sep 2022 14:14:01 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"recipeId\": 5,\n    \"recipeName\": \"GulabJamun\",\n    \"recipeCategory\": \"Sweet-Dish\",\n    \"noOfServings\": 7,\n    \"ingredients\": \"flour\",\n    \"instructions\": \"fry\"\n}"
+				}
+			]
+		},
+		{
+			"name": "DeleteRequest",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{localhost}}/{{resourcePath}}/deleteRecipe/4",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"{{resourcePath}}",
+						"deleteRecipe",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DeleteRequest",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/food-recipe-api/v1/deleteRecipe/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"food-recipe-api",
+								"v1",
+								"deleteRecipe",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Sep 2022 14:14:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": " The row is deleted for given recipeId"
+				}
+			]
+		},
+		{
+			"name": "GetAllRecipe",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{localhost}}/{{resourcePath}}/getAllRecipe",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"{{resourcePath}}",
+						"getAllRecipe"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetAllRecipe",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/food-recipe-api/v1/getAllRecipe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"food-recipe-api",
+								"v1",
+								"getAllRecipe"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Sep 2022 14:15:18 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"recipeId\": 1,\n        \"recipeName\": \"Pav Bhaji\",\n        \"recipeCategory\": \"veg\",\n        \"noOfServings\": 4,\n        \"ingredients\": \"Potato\",\n        \"instructions\": \"Cooker\"\n    },\n    {\n        \"recipeId\": 2,\n        \"recipeName\": \"Dhokla\",\n        \"recipeCategory\": \"veg\",\n        \"noOfServings\": 3,\n        \"ingredients\": \"Beans\",\n        \"instructions\": \"Cooker\"\n    },\n    {\n        \"recipeId\": 3,\n        \"recipeName\": \"ButteChicken\",\n        \"recipeCategory\": \"Non-veg\",\n        \"noOfServings\": 5,\n        \"ingredients\": \"Chicken\",\n        \"instructions\": \"Utensils\"\n    },\n    {\n        \"recipeId\": 4,\n        \"recipeName\": \"Fish-fry\",\n        \"recipeCategory\": \"Non-veg\",\n        \"noOfServings\": 8,\n        \"ingredients\": \"Fish\",\n        \"instructions\": \"Pan-fry\"\n    },\n    {\n        \"recipeId\": 6,\n        \"recipeName\": \"Pav-Bhaji\",\n        \"recipeCategory\": \"Veg\",\n        \"noOfServings\": 2,\n        \"ingredients\": \"Pav\",\n        \"instructions\": \"Cook\"\n    },\n    {\n        \"recipeId\": 7,\n        \"recipeName\": \"Pav-Bhaji\",\n        \"recipeCategory\": \"Veg\",\n        \"noOfServings\": 2,\n        \"ingredients\": \"Pav\",\n        \"instructions\": \"Cook\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "checkRecipeCategoryByRecipeName",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{localhost}}/{{resourcePath}}/checkRecipe/recipeName/butterchicken",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"{{resourcePath}}",
+						"checkRecipe",
+						"recipeName",
+						"butterchicken"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "checkRecipeCategoryByRecipeName",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/food-recipe-api/v1/checkRecipe/recipeName/Pav-Bhaji",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"food-recipe-api",
+								"v1",
+								"checkRecipe",
+								"recipeName",
+								"Pav-Bhaji"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Sep 2022 14:16:32 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": " The given dish is vegeterian"
+				}
+			]
+		},
+		{
+			"name": "getRecipeByIngredientAndServes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{localhost}}/{{resourcePath}}/getAllRecipe/numberOfServes/5/ingredient/chicken",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"{{resourcePath}}",
+						"getAllRecipe",
+						"numberOfServes",
+						"5",
+						"ingredient",
+						"chicken"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getRecipeByIngredientAndServes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/food-recipe-api/v1/getAllRecipe/numberOfServes/5/ingredient/Chicken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"food-recipe-api",
+								"v1",
+								"getAllRecipe",
+								"numberOfServes",
+								"5",
+								"ingredient",
+								"Chicken"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Sep 2022 14:22:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"recipeId\": 3,\n        \"recipeName\": \"ButteChicken\",\n        \"recipeCategory\": \"Non-veg\",\n        \"noOfServings\": 5,\n        \"ingredients\": \"Chicken\",\n        \"instructions\": \"Utensils\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getRecipeByInstructionNotIngredient",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{localhost}}/{{resourcePath}}/getAllRecipe/ingredient/beans/instruction/cooker",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"{{resourcePath}}",
+						"getAllRecipe",
+						"ingredient",
+						"beans",
+						"instruction",
+						"cooker"
+					],
+					"query": [
+						{
+							"key": "content-type",
+							"value": "applica",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getRecipeByInstructionNotIngredient",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/food-recipe-api/v1/getAllRecipe/ingredient/fish/instruction/cooker",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"food-recipe-api",
+								"v1",
+								"getAllRecipe",
+								"ingredient",
+								"fish",
+								"instruction",
+								"cooker"
+							],
+							"query": [
+								{
+									"key": "content-type",
+									"value": "applica",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Sep 2022 14:24:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"recipeId\": 1,\n        \"recipeName\": \"Pav Bhaji\",\n        \"recipeCategory\": \"veg\",\n        \"noOfServings\": 4,\n        \"ingredients\": \"Potato\",\n        \"instructions\": \"Cooker\"\n    },\n    {\n        \"recipeId\": 2,\n        \"recipeName\": \"Dhokla\",\n        \"recipeCategory\": \"veg\",\n        \"noOfServings\": 3,\n        \"ingredients\": \"Beans\",\n        \"instructions\": \"Cooker\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getAllRecipesByIngredient",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{localhost}}/{{resourcePath}}/getAllRecipe/ingredient/chicken",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"{{resourcePath}}",
+						"getAllRecipe",
+						"ingredient",
+						"chicken"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getAllRecipesByIngredient",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/food-recipe-api/v1/getAllRecipe/ingredient/Pav",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"food-recipe-api",
+								"v1",
+								"getAllRecipe",
+								"ingredient",
+								"Pav"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Sep 2022 14:25:22 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"recipeId\": 6,\n        \"recipeName\": \"Pav-Bhaji\",\n        \"recipeCategory\": \"Veg\",\n        \"noOfServings\": 2,\n        \"ingredients\": \"Pav\",\n        \"instructions\": \"Cook\"\n    },\n    {\n        \"recipeId\": 7,\n        \"recipeName\": \"Pav-Bhaji\",\n        \"recipeCategory\": \"Veg\",\n        \"noOfServings\": 2,\n        \"ingredients\": \"Pav\",\n        \"instructions\": \"Cook\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getAllRecipeByCategory",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{localhost}}/{{resourcePath}}/getAllRecipe/category/non-veg",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"{{resourcePath}}",
+						"getAllRecipe",
+						"category",
+						"non-veg"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getAllRecipeByCategory",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/food-recipe-api/v1/getAllRecipe/category/veg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"food-recipe-api",
+								"v1",
+								"getAllRecipe",
+								"category",
+								"veg"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Sep 2022 14:32:17 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"recipeId\": 1,\n        \"recipeName\": \"Pav Bhaji\",\n        \"recipeCategory\": \"veg\",\n        \"noOfServings\": 4,\n        \"ingredients\": \"Potato\",\n        \"instructions\": \"Cooker\"\n    },\n    {\n        \"recipeId\": 2,\n        \"recipeName\": \"Dhokla\",\n        \"recipeCategory\": \"veg\",\n        \"noOfServings\": 3,\n        \"ingredients\": \"Beans\",\n        \"instructions\": \"Cooker\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Swagger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/v2/api-docs",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"v2",
+						"api-docs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Swagger",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v2/api-docs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v2",
+								"api-docs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 11 Sep 2022 09:22:19 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"swagger\": \"2.0\",\n    \"info\": {\n        \"description\": \"Food-Recipe-API\",\n        \"title\": \"Favorite-Food-Recipe-API\"\n    },\n    \"host\": \"localhost:8080\",\n    \"basePath\": \"/\",\n    \"tags\": [\n        {\n            \"name\": \"food-recipe-controller\",\n            \"description\": \"Food Recipe Controller\"\n        }\n    ],\n    \"paths\": {\n        \"/food-recipe-api/v1/checkRecipe/recipeName/{recipeName}\": {\n            \"get\": {\n                \"tags\": [\n                    \"food-recipe-controller\"\n                ],\n                \"summary\": \"checkRecipeCategoryByRecipeName\",\n                \"operationId\": \"checkRecipeCategoryByRecipeNameUsingGET\",\n                \"produces\": [\n                    \"application/json\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"recipeName\",\n                        \"in\": \"path\",\n                        \"description\": \"recipeName\",\n                        \"required\": true,\n                        \"type\": \"string\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"string\"\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/food-recipe-api/v1/createRecipe\": {\n            \"post\": {\n                \"tags\": [\n                    \"food-recipe-controller\"\n                ],\n                \"summary\": \"createRecipes\",\n                \"operationId\": \"createRecipesUsingPOST\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"application/json\"\n                ],\n                \"parameters\": [\n                    {\n                        \"in\": \"body\",\n                        \"name\": \"recipes\",\n                        \"description\": \"recipes\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/RecipesRequestDto\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/RecipesResponseDto\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/food-recipe-api/v1/deleteRecipe/{recipeId}\": {\n            \"delete\": {\n                \"tags\": [\n                    \"food-recipe-controller\"\n                ],\n                \"summary\": \"deleteRecipe\",\n                \"operationId\": \"deleteRecipeUsingDELETE\",\n                \"produces\": [\n                    \"application/json\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"recipeId\",\n                        \"in\": \"path\",\n                        \"description\": \"recipeId\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int32\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"string\"\n                        }\n                    },\n                    \"204\": {\n                        \"description\": \"No Content\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    }\n                }\n            }\n        },\n        \"/food-recipe-api/v1/getAllRecipe\": {\n            \"get\": {\n                \"tags\": [\n                    \"food-recipe-controller\"\n                ],\n                \"summary\": \"getAllRecipes\",\n                \"operationId\": \"getAllRecipesUsingGET\",\n                \"produces\": [\n                    \"application/json\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"$ref\": \"#/definitions/RecipesResponseDto\"\n                            }\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/food-recipe-api/v1/getAllRecipe/category/{recipeCategory}\": {\n            \"get\": {\n                \"tags\": [\n                    \"food-recipe-controller\"\n                ],\n                \"summary\": \"getAllRecipesByCategory\",\n                \"operationId\": \"getAllRecipesByCategoryUsingGET\",\n                \"produces\": [\n                    \"application/json\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"recipeCategory\",\n                        \"in\": \"path\",\n                        \"description\": \"recipeCategory\",\n                        \"required\": true,\n                        \"type\": \"string\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"$ref\": \"#/definitions/RecipesResponseDto\"\n                            }\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/food-recipe-api/v1/getAllRecipe/ingredient/{ingredient}\": {\n            \"get\": {\n                \"tags\": [\n                    \"food-recipe-controller\"\n                ],\n                \"summary\": \"getAllRecipesByIngredient\",\n                \"operationId\": \"getAllRecipesByIngredientUsingGET\",\n                \"produces\": [\n                    \"application/json\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"ingredient\",\n                        \"in\": \"path\",\n                        \"description\": \"ingredient\",\n                        \"required\": true,\n                        \"type\": \"string\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"$ref\": \"#/definitions/RecipesResponseDto\"\n                            }\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/food-recipe-api/v1/getAllRecipe/ingredient/{ingredient}/instruction/{instruction}\": {\n            \"get\": {\n                \"tags\": [\n                    \"food-recipe-controller\"\n                ],\n                \"summary\": \"getRecipeByInstructionNotIngredient\",\n                \"operationId\": \"getRecipeByInstructionNotIngredientUsingGET\",\n                \"produces\": [\n                    \"application/json\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"ingredient\",\n                        \"in\": \"path\",\n                        \"description\": \"ingredient\",\n                        \"required\": true,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"instruction\",\n                        \"in\": \"path\",\n                        \"description\": \"instruction\",\n                        \"required\": true,\n                        \"type\": \"string\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"$ref\": \"#/definitions/RecipesResponseDto\"\n                            }\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/food-recipe-api/v1/getAllRecipe/numberOfServes/{numberOfServes}/ingredient/{ingredient}\": {\n            \"get\": {\n                \"tags\": [\n                    \"food-recipe-controller\"\n                ],\n                \"summary\": \"getRecipeByIngredientAndServes\",\n                \"operationId\": \"getRecipeByIngredientAndServesUsingGET\",\n                \"produces\": [\n                    \"application/json\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"numberOfServes\",\n                        \"in\": \"path\",\n                        \"description\": \"numberOfServes\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int32\"\n                    },\n                    {\n                        \"name\": \"ingredient\",\n                        \"in\": \"path\",\n                        \"description\": \"ingredient\",\n                        \"required\": true,\n                        \"type\": \"string\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"$ref\": \"#/definitions/RecipesResponseDto\"\n                            }\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/food-recipe-api/v1/updateRecipe\": {\n            \"put\": {\n                \"tags\": [\n                    \"food-recipe-controller\"\n                ],\n                \"summary\": \"updateRecipe\",\n                \"operationId\": \"updateRecipeUsingPUT\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"application/json\"\n                ],\n                \"parameters\": [\n                    {\n                        \"in\": \"body\",\n                        \"name\": \"recipesUpdateRequestDto\",\n                        \"description\": \"recipesUpdateRequestDto\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/RecipesUpdateRequestDto\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/RecipesResponseDto\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        }\n    },\n    \"definitions\": {\n        \"RecipesRequestDto\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"ingredients\": {\n                    \"type\": \"string\"\n                },\n                \"instructions\": {\n                    \"type\": \"string\"\n                },\n                \"noOfServings\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                },\n                \"recipeCategory\": {\n                    \"type\": \"string\"\n                },\n                \"recipeName\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"title\": \"RecipesRequestDto\"\n        },\n        \"RecipesResponseDto\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"ingredients\": {\n                    \"type\": \"string\"\n                },\n                \"instructions\": {\n                    \"type\": \"string\"\n                },\n                \"noOfServings\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                },\n                \"recipeCategory\": {\n                    \"type\": \"string\"\n                },\n                \"recipeId\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                },\n                \"recipeName\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"title\": \"RecipesResponseDto\"\n        },\n        \"RecipesUpdateRequestDto\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"ingredients\": {\n                    \"type\": \"string\"\n                },\n                \"instructions\": {\n                    \"type\": \"string\"\n                },\n                \"noOfServings\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                },\n                \"recipeCategory\": {\n                    \"type\": \"string\"\n                },\n                \"recipeId\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                },\n                \"recipeName\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"title\": \"RecipesUpdateRequestDto\"\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
