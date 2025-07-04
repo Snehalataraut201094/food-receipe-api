@@ -1,36 +1,39 @@
-**Project Name** 
-Spring Boot Rest favorite food recipe api project.
+# Project Name 
+- Spring Boot Rest favorite food recipe api project.
 
-**Description:**
+## Description:
+- Favorite-food-recipe-api is the java standalone application which is basically a recipe API . It contains the spring rest endpoints which are used for storing and retrieving the data from database. The recipe API holds the below endpoints.
 
-Favorite-food-recipe-api is the java standalone application which is basically a recipe API . It contains the spring rest endpoints which are used for storing and retrieving the data from database. The recipe API holds the below endpoints.
+## Technology Used:
+- Java 8
+- Spring Boot
+- Spring data JPA
+- MySQL
 
-**Technology Used:**
-Java8, Spring Boot, Spring data JPA, SQL .
+## Tools USed:
+- IntelliJ
+- Postman
+- Maven 3.X.X
+- JDK1.8
 
-**Tools USed:**
-Eclipse, Postman, Maven 3.X.X, JDK1.8
-
-**How to clone the project:**
-
-1. open the git bash  
-2. copy the "https://github.com/snehalataraut2010/recipe-api.git" url from github
+# How to clone the project:
+1. Open the git bash  
+2. Copy the "https://github.com/snehalataraut2010/recipe-api.git" url from github
 3. Use git clone "https://github.com/snehalataraut2010/recipe-api.git"
 4. git checkout master
 5. git pull
 
-**How to import the application in IDE:**
+# How to import the application in IDE:
 
-Before importing the project we shoulf install JDK 1.8 on our machine.
-
-1. Go to the File  menu of the Eclipse IDE
+Before importing the project please install JDK 1.8 on our machine.
+1. Go to the File  menu of the IntelliJ IDE
 2. Select Import option
 3. Select existing maven project worspace Project(i.e like "workspace name from folder" in our case it is "recipe-api") from our system directory.
 4. In the root directory select the project folder from workspace where we keep the project. 
 5. Check the check box of pom.xml of API
 6. Finish
 
-**How to do maven build after importing into Eclipse IDE.**
+# How to do maven build after importing into IntelliJ IDE
 
 This application is packaged as a jar which has Tomcat 8 embedded. No Tomcat or JBoss installation is necessary. You run it using the java -jar command.
 
@@ -39,7 +42,7 @@ This application is packaged as a jar which has Tomcat 8 embedded. No Tomcat or 
 3. Put clean install -e in the goals.
 4. Click Apply and then Run.
 
-**How to run the server.**
+# How to run the server
 
 1.Right click on the project select "Run As " from there select "Java Application".
 
