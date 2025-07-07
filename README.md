@@ -1,8 +1,7 @@
-# Project Name 
-- Spring Boot Rest favorite food recipe api project.
+# Food Recipe REST API
 
 ## Description:
-- Favorite-food-recipe-api is the java standalone application which is basically a recipe API . It contains the spring rest endpoints which are used for storing and retrieving the data from database. The recipe API holds the below endpoints.
+- It is a java standalone application which is basically a recipe API . It contains the CRUD operations which are used for storing and retrieving the data from database.
 
 ## Technology Used:
 - Java 8
@@ -18,44 +17,38 @@
 
 # How to clone the project:
 1. Open the git bash  
-2. Copy the "https://github.com/snehalataraut2010/recipe-api.git" url from github
-3. Use git clone "https://github.com/snehalataraut2010/recipe-api.git"
+2. Clone the "https://github.com/Snehalataraut201094/food-receipe-api.git" url from github
 4. git checkout master
 5. git pull
 
 # How to import the application in IDE:
-
 Before importing the project please install JDK 1.8 on our machine.
 1. Go to the File  menu of the IntelliJ IDE
-2. Select Import option
+2. Select open option
 3. Select existing maven project worspace Project(i.e like "workspace name from folder" in our case it is "recipe-api") from our system directory.
 4. In the root directory select the project folder from workspace where we keep the project. 
 5. Check the check box of pom.xml of API
 6. Finish
 
 # How to do maven build after importing into IntelliJ IDE
-
-This application is packaged as a jar which has Tomcat 8 embedded. No Tomcat or JBoss installation is necessary. You run it using the java -jar command.
-
-1. Right click on project.
-2. Select Run As then maven build
-3. Put clean install -e in the goals.
-4. Click Apply and then Run.
+This application is packaged as a jar which has Tomcat embedded. No Tomcat or JBoss installation is necessary. You run it using the java -jar command.
+1. Select maven opntion on the right hand of the IDE window
+2. Put clean install -e -u in the goals.
+3. Click Apply and then Run.
 
 # How to run the server
-
 1.Right click on the project select "Run As " from there select "Java Application".
 
 Once the application runs you should see something like this
 
-2017-08-29 17:31:23.091  INFO 19387 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
-2017-08-29 17:31:23.097  INFO 19387 --- [           main] com.khoubyari.example.Application        : Started Application in 22.285 seconds (JVM running for 23.032)
+2025-08-29 17:31:23.091  INFO 19387 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2025-08-29 17:31:23.097  INFO 19387 --- [           main] com.khoubyari.example.Application        : Started Application in 22.285 seconds (JVM running for 23.032)
 
-**About the Service:**
+# About the Service
 
 The service is just a simple food recipe REST service. It uses an in-memory database (H2) to store the data. We can also do with a relational database like MySQL or PostgreSQL. To call some REST endpoints defined in com.burk.food.recipe.api.controller on port 8080.
 
-** Here is what this little application demonstrates:**
+ # Here is what this little application demonstrates
 
 1. Full integration with the latest Spring Framework: inversion of control, dependency injection, data JPA etc.
 
@@ -68,15 +61,15 @@ The service is just a simple food recipe REST service. It uses an in-memory data
 8. Also added the Integration test cases using spring dependency which is spring-starter-test.
 9  All APIs are "self-documented" by Swagger2 using annotations.
 
-**To view Swagger 2 API docs**
-
+# To view Swagger 2 API docs
 Run the server and browse to below link:
 
 1.SwaggerUI - http://localhost:8080/swagger-ui.html
 
 2.Swagger API-Doc - http://localhost:8080/v2/api-docs
 
-***Here are some endpoints :***
+# Important Endpoints
+
 1. http://localhost:8080/food-recipe-api/createRecipe -- POST operation
 2. http://localhost:8080/food-recipe-api/updateRecipe -- PUT Operation
 3. http://localhost:8080/food-recipe-api/deleteRecipe/{recipeId} -- GET Operation
@@ -88,7 +81,7 @@ Run the server and browse to below link:
 9. http://localhost:8080/food-recipe-api/getAllRecipe/category/{category} -- GET Operation
 
 
-**Create Recipe endpoint:**
+# Create Recipe endpoint
 
 POST /food-recipe-api/createRecipe
 
@@ -102,14 +95,13 @@ RESPONSE: HTTP 201 (Created)
 
 Location header: http://localhost:8080/food-recipe-api/createRecipe
 
-
-** TO Update Recipe **
+# Update Recipe Endpoint
 
 <img width="290" alt="image" src="https://user-images.githubusercontent.com/113285163/189531054-cb0aa930-fdf7-48de-9d81-40b26cf85d29.png">
 
 RESPONSE: HTTP 404 (No Data Found)
 
-***About Spring Boot***
+ # About Spring Boot
 
 Spring Boot is an "opinionated" application bootstrapping framework that makes it easy to create new RESTful services (among other types of applications). It provides many of the usual Spring facilities that can be configured easily usually without any XML. In addition to easy set up of Spring Controllers, Spring Data, etc. Spring Boot comes with the Actuator module that gives the application the following endpoints helpful in monitoring and operating the service:
 
@@ -132,14 +124,13 @@ Spring Boot is an "opinionated" application bootstrapping framework that makes i
 10. http://localhost:8080/food-recipe-api/getAllRecipe/category/{category} -- GET Operation -- Return list of recipe for matching input category.
 
 
-****Running the project with MySQL****
+# Running the project with MySQL
 
 This project uses an in-memory database so that you don't have to install a database in order to run it. However, converting it to run with another relational database such as MySQL is very easy. Since the project uses Spring Data and the Repository pattern, it's even fairly easy to back the same service with MongoDB.
 
 Here is what you would do to back the services with MySQL, for example:
 
-**In pom.xml add:**
-
+# In pom.xml add
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -147,7 +138,7 @@ Here is what you would do to back the services with MySQL, for example:
         
 
 
-**DataSource Configuration in property file for mySQL:**
+# DataSource Configuration in property file for mySQL
 
 spring.jpa.hibernate.ddl-auto=update
 
