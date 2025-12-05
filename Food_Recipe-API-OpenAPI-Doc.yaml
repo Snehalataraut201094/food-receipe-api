@@ -1,0 +1,186 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8081
+  description: Generated server url
+paths:
+  /api/v1/recipes/{id}:
+    get:
+      tags:
+      - recipe-controller
+      operationId: getRecipeById
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          minimum: 1
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/RecipesResponse"
+    put:
+      tags:
+      - recipe-controller
+      operationId: updateRecipe
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RecipeRequestDto"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/RecipesResponse"
+    delete:
+      tags:
+      - recipe-controller
+      operationId: deleteRecipe
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: OK
+  /api/v1/recipes:
+    get:
+      tags:
+      - recipe-controller
+      operationId: getAllRecipes
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/RecipesResponse"
+    post:
+      tags:
+      - recipe-controller
+      operationId: createRecipe
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RecipeRequestDto"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/RecipesResponse"
+  /api/v1/recipes/search:
+    get:
+      tags:
+      - recipe-controller
+      operationId: searchRecipes
+      parameters:
+      - name: request
+        in: query
+        required: true
+        schema:
+          $ref: "#/components/schemas/RecipeSearchFilterRequest"
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/RecipesResponse"
+components:
+  schemas:
+    RecipeRequestDto:
+      required:
+      - ingredients
+      - instructions
+      - isVegetarian
+      - recipeName
+      - servings
+      type: object
+      properties:
+        recipeName:
+          maxLength: 2147483647
+          minLength: 1
+          type: string
+        isVegetarian:
+          type: boolean
+        servings:
+          minimum: 1
+          type: integer
+          format: int32
+        ingredients:
+          maxItems: 2147483647
+          minItems: 1
+          type: array
+          items:
+            maxLength: 2147483647
+            minLength: 1
+            type: string
+        instructions:
+          type: string
+      description: New Recipe to create.
+    RecipesResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+        isVegetarian:
+          type: boolean
+        servings:
+          type: integer
+          format: int32
+        ingredients:
+          type: array
+          items:
+            type: string
+        instructions:
+          type: string
+    RecipeSearchFilterRequest:
+      type: object
+      properties:
+        isVegetarian:
+          type: boolean
+        servings:
+          type: integer
+          format: int32
+        includeIngredients:
+          type: array
+          items:
+            type: string
+        excludeIngredients:
+          type: array
+          items:
+            type: string
+        instructionText:
+          type: string

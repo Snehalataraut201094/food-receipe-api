@@ -1,0 +1,12 @@
+spring :
+  datasource :
+    hikari :
+      maxLifetime : 25000
+      idleTimeout : 30000
+      minimumIdle : 2
+      maximumPoolSize : 10
+      connectionTimeout : 30000
+  jpa :
+    hibernate :
+      ddl-auto : update
+    show-sql : true
